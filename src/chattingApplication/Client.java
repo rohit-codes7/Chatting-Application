@@ -9,7 +9,6 @@ import java.io.DataOutputStream;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-// RUN -> main method call -> object call -> Immediate constructor call
 
 public class Client  implements ActionListener {
     JTextField text;
@@ -22,10 +21,10 @@ public class Client  implements ActionListener {
 
         JPanel p1 =  new JPanel();
         p1.setBackground(new Color(7,94,84));
-        p1.setBounds(0,0,450, 70); // as we have set the layout to null we have to mention the  boundaries
+        p1.setBounds(0,0,450, 70); 
         p1.setLayout(null);
 
-        f.add(p1); // every time you are creating panel you have to add it using add function
+        f.add(p1); 
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/3.png"));
         Image i2 = i1.getImage().getScaledInstance(25,25,Image.SCALE_DEFAULT);
@@ -41,7 +40,7 @@ public class Client  implements ActionListener {
         back.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-//                setVisible(false);
+
                 System.exit(0);
             }
         });
@@ -122,7 +121,7 @@ public class Client  implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         try {
-            String out = text.getText(); // right.add function can't take string we have to make panel for that
+            String out = text.getText(); 
 
             JPanel p1 = formatLabel(out);
 
