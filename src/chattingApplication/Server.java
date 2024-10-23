@@ -2,7 +2,7 @@ package chattingApplication;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import java.awt.*; // color class
+import java.awt.*; 
 import java.awt.event.*;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -10,7 +10,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-// RUN -> main method call -> object call -> Immediate constructor call
+
 
 public class Server implements ActionListener {
     JTextField text;
@@ -23,10 +23,10 @@ public class Server implements ActionListener {
 
         JPanel p1 =  new JPanel();
         p1.setBackground(new Color(7,94,84));
-        p1.setBounds(0,0,450, 70); // as we have set the layout to null we have to mention the  boundaries
+        p1.setBounds(0,0,450, 70); 
         p1.setLayout(null);
 
-        f.add(p1); // every time you are creating panel you have to add it using add function
+        f.add(p1); /
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/3.png"));
         Image i2 = i1.getImage().getScaledInstance(25,25,Image.SCALE_DEFAULT);
@@ -42,7 +42,7 @@ public class Server implements ActionListener {
         back.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-//                setVisible(false);
+
                 System.exit(0);
             }
         });
@@ -110,20 +110,20 @@ public class Server implements ActionListener {
 
 
 
-        // By default, opening location of the window is top left
+  
         f.setSize(450,700);
         f.setUndecorated(true); // to remove the default header part
 
 
         f.setLocation(200,50);
         f.getContentPane().setBackground(Color.white);
-        f.setVisible(true); // set visible should always be at last
+        f.setVisible(true); 
 
     }
     @Override
     public void actionPerformed(ActionEvent e) {
         try {
-            String out = text.getText(); // right.add function can't take string we have to make panel for that
+            String out = text.getText(); 
 
             JPanel p1 = formatLabel(out);
 
